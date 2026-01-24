@@ -1,0 +1,8 @@
+        protocol    n  shipped_pct  reject_pct  false_ship_pct  mean_tokens  tokens_per_correct
+       TruthCert 2000        29.75       70.25           15.00       6930.8             46988.4
+TruthCert+TC-RCT 2000        16.40       83.60            3.95       6999.0             56217.3
+
+Interpretation:
+- TC-RCT tends to reduce *false_ship* by catching RCT-specific corruptions.
+- It can also increase *reject_pct* even on correct bundles (false positives).
+- Whether that's 'value' depends on your objective function (safety vs throughput vs cost).
