@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use TruthCert, please cite the Zenodo release."
+title: "TruthCert"
+type: software
+authors:
+  - family-names: Ahmad
+    given-names: Mahmood
+doi: "10.5281/zenodo.18363659"
+url: "https://doi.org/10.5281/zenodo.18363659"
+license: MIT
+version: "0.1.0"
+date-released: "2026-01-24"
+publisher: "Zenodo"
