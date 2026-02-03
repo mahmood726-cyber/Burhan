@@ -1,1 +1,62 @@
-pandas>=2.0
+# TruthCert Verification Extensions - Requirements
+# =================================================
+
+# Core Dependencies (required for all extensions)
+# -----------------------------------------------
+
+# TC-PCN: Proof-Carrying Numbers
+# No additional dependencies - pure Python
+
+# TC-QWED: Deterministic Engine Verification
+sympy>=1.12                    # Mathematical verification engine
+z3-solver>=4.12.0              # SMT solver for logic verification
+
+# TC-RIVALS: Team of Rivals Multi-Agent
+# No additional dependencies - pure Python
+
+# TC-VERIFIER: CompassVerifier Integration
+# No additional dependencies for base implementation
+# Optional: transformers, torch for actual CompassVerifier model
+
+# TC-PRM: Process Reward Models
+# No additional dependencies - pure Python
+
+# TC-FORMAL: Formal Verification
+sympy>=1.12                    # Symbolic math prover
+z3-solver>=4.12.0              # SMT solver
+
+# Optional Dependencies
+# ---------------------
+
+# For full CompassVerifier model integration (TC-VERIFIER)
+# transformers>=4.35.0
+# torch>=2.0.0
+
+# For Lean prover integration (TC-FORMAL)
+# Note: Requires separate Lean 4 installation
+# See: https://leanprover.github.io/lean4/doc/setup.html
+
+# For enhanced logging and debugging
+# rich>=13.0.0
+
+# For async execution (future multi-agent enhancements)
+# asyncio>=3.4.3
+
+# Development Dependencies
+# ------------------------
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# black>=23.0.0
+# mypy>=1.0.0
+# ruff>=0.1.0
+
+# Installation Instructions
+# -------------------------
+# Basic installation (most extensions):
+#   pip install sympy z3-solver
+#
+# Full installation:
+#   pip install -r requirements.txt
+#
+# Note: Some systems may require:
+#   pip install sympy z3-solver --break-system-packages
