@@ -18,7 +18,7 @@ import pandas as pd
 import importlib.util, sys
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
-BASE = HERE.parent / "truthcert_toy_benchmark.py"
+BASE = HERE / "truthcert_toy_benchmark.py"
 spec = importlib.util.spec_from_file_location("truthcert_toy_benchmark", BASE)
 tc = importlib.util.module_from_spec(spec)
 sys.modules["truthcert_toy_benchmark"] = tc

@@ -813,6 +813,11 @@ def integrate_with_truthcert(cert: FormalCertificate) -> Dict[str, Any]:
 # =============================================================================
 
 if __name__ == "__main__":
+    import sys
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     print("\n" + "#"*70)
     print("# TC-FORMAL: Formal Verification Extension")
     print("# TruthCert Protocol - Machine-Checkable Proofs")

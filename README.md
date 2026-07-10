@@ -35,29 +35,27 @@ TruthCert is intentionally **fail-closed**: if verification is insufficient, the
 
 ## Repo layout
 
-- `spec/`
-  - `TruthCert_v3.1.0-FINAL_Public_Frozen.md` — the frozen public spec
-- `packs/`
-  - `TruthCert_12_Domain_Extensions_v1.md` — the 12 domain extension packs
-  - `TC-RCT/` — starter skeleton for the RCT extraction pack
-- `templates/`
-  - `TruthCert_Certification_Badge_Disclosure_Template_v1.md` — copy/paste badge + disclosure blocks
-- `examples/`
-  - minimal `scope_lock.yaml`, `policy_anchor.yaml`, plus SHIPPED/REJECTED bundle examples
-- `validators/`
-  - `validator_registry.yaml` — scaffold for versioned validators
-- `benchmarks/`
-  - `simulated/` — toy + richer-toy harnesses for quick iteration
-  - `real-rct-v0.1/` — skeleton for the first real-paper benchmark suite
-- `tools/`
-  - `score_contract_v1.py` — scoring script for Contract-v1 metrics
+All scripts and documents live at the repository root (flat layout):
+
+- `TruthCert_v3.1.0-FINAL_Public_Frozen.md` — the frozen public spec
+- `TruthCert_12_Domain_Extensions_v1.md` — the 12 domain extension packs
+- `TruthCert_Certification_Badge_Disclosure_Template_v1.md` — copy/paste badge + disclosure blocks
+- `truthcert_toy_benchmark.py` — toy simulation harness
+- `truthcert_12pack_benchmark_v1.py`, `truthcert_12pack_balanced_policy_v1.py` — 12-pack benchmarks
+- `simulate_truthcert_vs_rct_pack.py` — TruthCert vs TC-RCT stress model
+- `score_contract_v1.py` — scoring script for Contract-v1 metrics
+- `tc_pcn.py`, `tc_prm.py`, `tc_qwed.py`, `tc_formal.py`, `tc_rivals.py`, `tc_verifier.py`, `tc_integration.py` — verification extension modules
+- `tests/` — pytest suite
 
 ---
 
 ## Quick start (simulation harness)
 
+Run the scripts from the repository root:
+
 ```bash
-cd benchmarks/simulated
 python truthcert_toy_benchmark.py
 python truthcert_12pack_benchmark_v1.py --n 4800 --seed 2026
 python truthcert_12pack_balanced_policy_v1.py
+python simulate_truthcert_vs_rct_pack.py --n 5000 --seed 2026
+```

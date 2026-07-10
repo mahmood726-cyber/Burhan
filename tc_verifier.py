@@ -772,6 +772,11 @@ def integrate_with_truthcert(result: VerificationResult, claim: Claim) -> Dict[s
 # =============================================================================
 
 if __name__ == "__main__":
+    import sys
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     print("\n" + "#"*70)
     print("# TC-VERIFIER: CompassVerifier-Based Verification Extension")
     print("# TruthCert Protocol - Unified Claim Verification")

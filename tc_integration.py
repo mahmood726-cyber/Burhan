@@ -234,6 +234,11 @@ EXTENSION_COMBOS = {
 
 
 if __name__ == "__main__":
+    import sys
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     print("\n" + "#"*60)
     print("# TruthCert Extension Integration Example")
     print("#"*60)
